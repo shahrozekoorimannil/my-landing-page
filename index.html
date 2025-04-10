@@ -4,34 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NIVK | Ethical Hacker</title>
+  <title>SHAHROZE | Ethical Hacker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+      color: #ffffff;
       overflow-x: hidden;
     }
 
-    /* Glowing background effect */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: radial-gradient(circle at center, rgba(0,255,255,0.06), transparent 70%);
-      z-index: -1;
-    }
-
     header {
-      padding: 3rem 1rem;
       text-align: center;
+      padding: 100px 20px 40px;
     }
 
     header h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
       color: #0ff;
       text-shadow: 0 0 10px #0ff;
     }
@@ -39,174 +35,145 @@
     header p {
       font-size: 1.2rem;
       color: #ccc;
+      margin-top: 10px;
     }
 
     section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #0ff;
-      margin-bottom: 1rem;
+      padding: 60px 20px;
       text-align: center;
     }
 
     .services {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
       justify-content: center;
+      gap: 40px;
     }
 
-    .service {
-      background: #1a1a1a;
-      padding: 2rem;
+    .service-box {
+      background: #1b1b1b;
+      padding: 30px;
+      border: 1px solid #333;
       border-radius: 10px;
-      box-shadow: 0 0 10px #0ff1;
       width: 280px;
-      text-align: center;
+      transition: transform 0.3s ease;
     }
 
-    .service:hover {
-      background: #222;
-      box-shadow: 0 0 15px #0ff;
-      transition: all 0.3s ease-in-out;
+    .service-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    .service-box h3 {
+      color: #0ff;
+      margin-bottom: 10px;
     }
 
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 600px;
-      margin: auto;
-      margin-top: 2rem;
+      max-width: 500px;
+      margin: 0 auto;
+      background: #1b1b1b;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #333;
     }
 
-    input, textarea {
-      padding: 0.8rem;
-      background: #111;
-      border: 1px solid #0ff4;
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
       border-radius: 5px;
+      background: #2a2a2a;
       color: #fff;
-      font-size: 1rem;
     }
 
-    button {
-      padding: 0.8rem;
+    form button {
+      padding: 10px 20px;
       background: #0ff;
       border: none;
       border-radius: 5px;
-      font-weight: bold;
       color: #000;
+      font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: 0.3s;
     }
 
-    button:hover {
-      background: #0cf;
+    form button:hover {
+      background: #00e0e0;
     }
 
-    /* SOCIAL ICONS */
-    .socials svg {
-      transition: all 0.3s ease-in-out;
-      border-radius: 50%;
+    .social-icons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
 
-    .socials a:hover svg {
-      transform: scale(1.2);
-      filter: drop-shadow(0 0 12px #0ff) brightness(1.3);
-      cursor: pointer;
+    .social-icons a {
+      color: #0ff;
+      font-size: 1.8rem;
+      transition: 0.3s;
     }
 
-    .socials {
-      margin-top: 4rem;
+    .social-icons a:hover {
+      color: #fff;
     }
 
-    .footer {
+    footer {
       text-align: center;
-      padding: 2rem;
-      color: #555;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>NIVK</h1>
+    <h1>SHAHROZE</h1>
     <p>Ethical Hacker | Penetration Tester | Offensive Security</p>
+    <p style="margin-top: 10px; color: #777;">"Everything is connected"</p>
   </header>
 
   <section>
-    <h2>Services</h2>
+    <h2 style="color:#0ff; margin-bottom: 40px;">My Services</h2>
     <div class="services">
-      <div class="service">
-        <h3>Penetration Testing</h3>
-        <p>Simulate attacks to find weaknesses before real hackers do.</p>
+      <div class="service-box">
+        <h3>Ethical Hacking</h3>
+        <p>Advanced network and system penetration testing services to secure your business.</p>
       </div>
-      <div class="service">
-        <h3>Vulnerability Assessment</h3>
-        <p>Scan and report system loopholes with actionable insights.</p>
+      <div class="service-box">
+        <h3>Security Audits</h3>
+        <p>Thorough code and infrastructure reviews to find and fix vulnerabilities.</p>
       </div>
-      <div class="service">
-        <h3>Security Consulting</h3>
-        <p>Get guidance to improve and future-proof your infrastructure.</p>
+      <div class="service-box">
+        <h3>Cyber Consultation</h3>
+        <p>Guidance on securing systems, training teams, and building hacker-proof solutions.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Contact Me</h2>
+    <h2 style="color:#0ff; margin-bottom: 30px;">Contact Me</h2>
     <form action="https://formsubmit.co/shahrozekoorimannil@gmail.com" method="POST">
-      <input type="text" name="name" required placeholder="Your Name" />
-      <input type="email" name="email" required placeholder="Your Email" />
-      <textarea name="message" rows="5" required placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
-  </section>
 
-  <!-- SOCIAL ICONS -->
-  <section class="socials">
-    <h2>Connect With Me</h2>
-    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
-
-      <!-- Instagram -->
-      <a href="https://instagram.com/blvck_nivk" target="_blank">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="#833AB4" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 8px #833AB4);">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.337 3.608 1.312.975.975 1.25 2.242 1.312 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.337 2.633-1.312 3.608-.975.975-2.242 1.25-3.608 1.312-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.337-3.608-1.312-.975-.975-1.25-2.242-1.312-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.337-2.633 1.312-3.608.975-.975 2.242-1.25 3.608-1.312C8.416 2.175 8.796 2.163 12 2.163zm0 1.838c-3.177 0-3.556.012-4.808.07-1.042.048-1.682.216-2.072.36a3.965 3.965 0 0 0-1.43.936 3.965 3.965 0 0 0-.936 1.43c-.144.39-.312 1.03-.36 2.072-.058 1.252-.07 1.631-.07 4.808s.012 3.556.07 4.808c.048 1.042.216 1.682.36 2.072a3.965 3.965 0 0 0 .936 1.43 3.965 3.965 0 0 0 1.43.936c.39.144 1.03.312 2.072.36 1.252.058 1.631.07 4.808.07s3.556-.012 4.808-.07c1.042-.048 1.682-.216 2.072-.36a3.965 3.965 0 0 0 1.43-.936 3.965 3.965 0 0 0 .936-1.43c.144-.39.312-1.03.36-2.072.058-1.252.07-1.631.07-4.808s-.012-3.556-.07-4.808c-.048-1.042-.216-1.682-.36-2.072a3.965 3.965 0 0 0-.936-1.43 3.965 3.965 0 0 0-1.43-.936c-.39-.144-1.03-.312-2.072-.36-1.252-.058-1.631-.07-4.808-.07zM12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
-        </svg>
-      </a>
-
-      <!-- Gmail -->
-      <a href="mailto:shahrozekoorimannil@gmail.com" target="_blank">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="#EA4335" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 8px #EA4335);">
-          <path d="M12 13.065L0 4.5V20h24V4.5L12 13.065zM12 10.935L24 2H0l12 8.935z"/>
-        </svg>
-      </a>
-
-      <!-- WhatsApp -->
-      <a href="https://wa.me/917558039270" target="_blank">
-        <svg width="40" height="40" viewBox="0 0 32 32" fill="#25D366" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 8px #25D366);">
-          <path d="M16.001 3.002c-7.179 0-13 5.821-13 13 0 2.313.623 4.547 1.808 6.51L3 29l6.65-1.759A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13 0-7.18-5.82-13-13-13zM16 26.938c-2.042 0-4.043-.547-5.785-1.576l-.413-.248-3.943 1.043 1.055-3.837-.27-.433a10.953 10.953 0 01-1.694-5.863C4.95 8.973 9.973 4 16.002 4 22.03 4 27 8.972 27 15.001c0 6.03-4.972 10.937-10.999 10.937zm6.147-8.088c-.313-.157-1.85-.914-2.137-1.02-.287-.105-.497-.157-.706.157-.208.313-.81 1.02-.994 1.229-.183.208-.366.235-.68.078-.313-.157-1.322-.487-2.515-1.555-.93-.828-1.557-1.85-1.74-2.163-.183-.313-.02-.482.137-.639.141-.14.313-.366.47-.55.157-.183.208-.313.313-.522.105-.208.052-.39-.026-.55-.078-.157-.706-1.7-.967-2.339-.254-.61-.514-.527-.706-.536l-.6-.01c-.208 0-.55.078-.837.39-.287.313-1.1 1.07-1.1 2.61s1.126 3.027 1.283 3.239c.157.208 2.215 3.384 5.367 4.744.75.323 1.334.516 1.79.661.752.24 1.436.206 1.977.125.603-.09 1.85-.755 2.114-1.48.26-.726.26-1.347.183-1.48-.078-.131-.287-.208-.6-.366z"/>
-        </svg>
-      </a>
-
-      <!-- Telegram -->
-      <a href="https://t.me/Effalenae" target="_blank">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="#0088cc" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 8px #0088cc);">
-          <path d="M9.993 16.223l-.392 3.42c.562 0 .805-.242 1.098-.532l2.632-2.467 5.458 3.975c1.002.553 1.723.26 1.988-.924l3.607-16.838c.346-1.61-.56-2.239-1.521-1.854L.889 9.344c-1.554.606-1.53 1.476-.266 1.865l5.238 1.635 12.145-7.655c.573-.367 1.092-.163.664.205L9.993 16.223z"/>
-        </svg>
-      </a>
-
+    <div class="social-icons">
+      <a href="https://instagram.com/blvck_nivk" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:shahrozekoorimannil@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/917558039270" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/Effalenae" target="_blank"><i class="fab fa-telegram"></i></a>
     </div>
   </section>
 
-  <div class="footer">
-    <p>“Everything is connected.”</p>
-    <p>&copy; 2025 SHAHROZE</p>
-  </div>
+  <footer>
+    &copy; 2025 SHAHROZE 
+  </footer>
 
 </body>
 </html>
