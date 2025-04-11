@@ -11,17 +11,30 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Orbitron', sans-serif;
-      background: #0f0f0f;
+      background: #000;
       color: #fff;
-      overflow: hidden;
+      overflow-x: hidden;
       position: relative;
     }
+
+    #bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      background: url('A_digital_interactive_background_image_in_a_futuri.png') no-repeat center center/cover;
+      filter: brightness(0.6);
+    }
+
     canvas {
       position: fixed;
       top: 0;
       left: 0;
       z-index: -1;
     }
+
     header {
       text-align: center;
       padding: 100px 20px 40px;
@@ -36,18 +49,21 @@
       color: #ccc;
       margin-top: 10px;
     }
+
     section {
       padding: 60px 20px;
       text-align: center;
     }
+
     .services {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
     }
+
     .service-box {
-      background: #1b1b1b;
+      background: rgba(0,0,0,0.6);
       padding: 30px;
       border: 1px solid #333;
       border-radius: 10px;
@@ -62,14 +78,16 @@
       color: #0ff;
       margin-bottom: 10px;
     }
+
     form {
       max-width: 500px;
       margin: 0 auto;
-      background: #1b1b1b;
+      background: rgba(0,0,0,0.6);
       padding: 30px;
       border-radius: 10px;
       border: 1px solid #333;
     }
+
     form input, form textarea {
       width: 100%;
       padding: 10px;
@@ -79,6 +97,7 @@
       background: #2a2a2a;
       color: #fff;
     }
+
     form button {
       padding: 10px 20px;
       background: #0ff;
@@ -89,23 +108,28 @@
       cursor: pointer;
       transition: 0.3s;
     }
+
     form button:hover {
       background: #00e0e0;
     }
+
     .social-icons {
       margin-top: 30px;
       display: flex;
       justify-content: center;
       gap: 20px;
     }
+
     .social-icons a {
       color: #0ff;
       font-size: 1.8rem;
       transition: 0.3s;
     }
+
     .social-icons a:hover {
       color: #fff;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -116,7 +140,8 @@
 </head>
 <body>
 
-  <canvas id="bg"></canvas>
+  <div id="bg-animation"></div>
+  <canvas id="bg-canvas"></canvas>
 
   <header>
     <h1>SHAHROZE</h1>
@@ -164,9 +189,8 @@
   </footer>
 
   <script>
-    const canvas = document.getElementById("bg");
+    const canvas = document.getElementById("bg-canvas");
     const ctx = canvas.getContext("2d");
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
@@ -201,7 +225,6 @@
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
-
         if (particles[i].life <= 0) {
           particles.splice(i, 1);
           i--;
@@ -232,3 +255,4 @@
 
 </body>
 </html>
+
