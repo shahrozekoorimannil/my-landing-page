@@ -7,6 +7,7 @@
   <title>SHAHROZE | Ethical Hacker</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -16,9 +17,19 @@
 
     body {
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+      background: #0f0f0f;
       color: #ffffff;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
     }
 
     header {
@@ -130,6 +141,9 @@
 </head>
 <body>
 
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
   <header>
     <h1>SHAHROZE</h1>
     <p>Ethical Hacker | Penetration Tester | Offensive Security</p>
@@ -172,8 +186,56 @@
   </section>
 
   <footer>
-    &copy; 2025 SHAHROZE 
+    &copy; 2025 SHAHROZE | Built with 💻 by AI
   </footer>
+
+  <!-- Particle Config -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 60,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#0ff"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5
+        },
+        "size": {
+          "value": 3
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#0ff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 3
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 
 </body>
 </html>
+
