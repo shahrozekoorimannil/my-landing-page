@@ -170,11 +170,17 @@
   <section>
     <h2 style="color:#0ff; margin-bottom: 30px;">Contact Me</h2>
     <form action="https://formsubmit.co/shahrozekoorimannil@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <!-- Redirects user after successful submission -->
+  <input type="hidden" name="_next" value="https://shahrozekoorimannil.github.io/my-landing-page/thankyou.html">
+
+  <!-- Your other form fields -->
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
 
     <div class="social-icons">
       <a href="https://instagram.com/blvck_nivk" target="_blank"><i class="fab fa-instagram"></i></a>
